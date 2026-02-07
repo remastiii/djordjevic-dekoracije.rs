@@ -1,6 +1,19 @@
 // Wait for DOM to load
 document.addEventListener('DOMContentLoaded', function() {
     
+    // Throttle function for better performance
+    function throttle(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+            const later = () => {
+                clearTimeout(timeout);
+                func.apply(this, args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
+    }
+    
     // Mobile Navigation
     const mobileMenu = document.getElementById('mobile-menu');
     const navMenu = document.getElementById('nav-menu');
@@ -18,11 +31,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Navbar scroll effect
+    // Navbar scroll effect (throttled)
     const navbar = document.querySelector('.navbar');
     let lastScrollTop = 0;
 
-    window.addEventListener('scroll', function() {
+    const handleScroll = throttle(function() {
         let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         
         if (scrollTop > 100) {
@@ -34,7 +47,9 @@ document.addEventListener('DOMContentLoaded', function() {
             navbar.style.backdropFilter = 'blur(10px)';
             navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
         }
-    });
+    }, 16); // 60fps
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
 
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -232,13 +247,32 @@ document.addEventListener('DOMContentLoaded', function() {
     // Back to Top Button
     const backToTopButton = document.getElementById('backToTop');
 
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) {
+    // Combined optimized scroll handler
+    const combinedScrollHandler = throttle(function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        // Navbar effect
+        if (scrollTop > 100) {
+            navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+            navbar.style.backdropFilter = 'blur(15px)';
+            navbar.style.boxShadow = '0 2px 30px rgba(0,0,0,0.15)';
+        } else {
+            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+            navbar.style.backdropFilter = 'blur(10px)';
+            navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+        }
+        
+        // Back to top button
+        if (scrollTop > 300) {
             backToTopButton.classList.add('show');
         } else {
             backToTopButton.classList.remove('show');
         }
-    });
+    }, 16);
+
+    // Use single scroll event listener
+    window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', combinedScrollHandler, { passive: true });
 
     backToTopButton.addEventListener('click', () => {
         window.scrollTo({
@@ -371,17 +405,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Loading animation removed to fix double loading issue
-
-    // Parallax effect for hero section
-    window.addEventListener('scroll', function() {
-        const scrolled = window.pageYOffset;
-        const hero = document.querySelector('.hero');
-        const rate = scrolled * -0.5;
-        
-        if (hero) {
-            hero.style.transform = `translateY(${rate}px)`;
-        }
-    });
+    
+    // Removed parallax effect to improve performance on mobile devices
 
     // Add hover effects for service cards
     const serviceCards = document.querySelectorAll('.service-card');
