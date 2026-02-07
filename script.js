@@ -58,6 +58,22 @@ document.addEventListener('DOMContentLoaded', function() {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const galleryItems = document.querySelectorAll('.gallery-item');
 
+    // Initialize gallery - show all items on load
+    function initGallery() {
+        const allButton = document.querySelector('.filter-btn[data-filter="all"]');
+        if (allButton) {
+            allButton.classList.add('active');
+        }
+        
+        galleryItems.forEach(item => {
+            item.style.display = 'block';
+            item.classList.remove('hide');
+        });
+    }
+
+    // Call initialization
+    initGallery();
+
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
             // Remove active class from all buttons
