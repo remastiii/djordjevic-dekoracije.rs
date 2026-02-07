@@ -60,19 +60,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize gallery - show all items on load
     function initGallery() {
+        // Force show all gallery items immediately
+        galleryItems.forEach(item => {
+            item.style.display = 'block';
+            item.style.opacity = '1';
+            item.style.transform = 'scale(1)';
+            item.classList.remove('hide');
+        });
+
+        // Activate "All" button
         const allButton = document.querySelector('.filter-btn[data-filter="all"]');
         if (allButton) {
             allButton.classList.add('active');
         }
         
-        galleryItems.forEach(item => {
-            item.style.display = 'block';
-            item.classList.remove('hide');
-        });
+        console.log('Gallery initialized with', galleryItems.length, 'items');
     }
 
-    // Call initialization
+    // Call initialization immediately and after a small delay for safety
     initGallery();
+    setTimeout(initGallery, 100);
 
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
