@@ -108,21 +108,15 @@ document.addEventListener('DOMContentLoaded', function() {
             galleryItems.forEach(item => {
                 if (filterValue === 'all') {
                     item.style.display = 'block';
-                    setTimeout(() => {
-                        item.classList.remove('hide');
-                    }, 10);
+                    item.classList.remove('hide');
                 } else {
                     const itemCategory = item.getAttribute('data-category');
                     if (itemCategory === filterValue) {
                         item.style.display = 'block';
-                        setTimeout(() => {
-                            item.classList.remove('hide');
-                        }, 10);
+                        item.classList.remove('hide');
                     } else {
+                        item.style.display = 'none';
                         item.classList.add('hide');
-                        setTimeout(() => {
-                            item.style.display = 'none';
-                        }, 300);
                     }
                 }
             });
@@ -282,26 +276,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Fade in animation on scroll
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, observerOptions);
-
-    // Apply fade-in animation to sections
-    const sections = document.querySelectorAll('section, .service-card, .gallery-item, .feature, .florist-service');
-    sections.forEach(section => {
-        section.classList.add('fade-in');
-        observer.observe(section);
-    });
-
+    // Removed fade-in animations for better mobile performance
+    // All content shows immediately
+    
     // Gallery lightbox functionality
     const galleryImages = document.querySelectorAll('.gallery-item img');
     
