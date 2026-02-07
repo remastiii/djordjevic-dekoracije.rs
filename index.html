@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dekoracije Đorđević - Profesionalne dekoracije za rođendane, svadbe, punoletstva sa balonima i pinjate. Cvećara sa aranžmanima. Najbolji dekorater u gradu.">
+    <meta name="keywords" content="dekoracije baloni, rođendan dekoracije, svadba dekoracije, punoletstvo, cvećara, aranžmani, Baloni Đorđević">
+    <meta name="author" content="Baloni Đorđević">
+    <meta property="og:title" content="Baloni Đorđević - Dekoracije i Cvećara">
+    <meta property="og:description" content="Profesionalne dekoracije sa balonima za sve prilike. Cvećara sa prekrasnim aranžmanima.">
+    <meta property="og:type" content="website">
+    <meta name="robots" content="index, follow">
+    
+    <title>Dekoracije Đorđević - Dekoracije Baloni, Pinjate i Cvećara | Rođendani, Svadbe, Punoletstva</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* Balloon Animation */
+        .balloon-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 9999;
+            overflow: hidden;
+        }
+        
+        .balloon {
+            position: absolute;
+            font-size: 35px;
+            animation: floatUp ease-out forwards;
+            opacity: 0;
+        }
+        
+        /* Baloni */
+        .balloon:nth-child(1) {
+            left: 8%;
+            animation-delay: 0.3s;
+            animation-duration: 4.2s;
+            color: #ff6b6b;
+        }
+        
+        .balloon:nth-child(2) {
+            left: 18%;
+            animation-delay: 0.8s;
+            animation-duration: 3.8s;
+            color: #4ecdc4;
+        }
+        
+        .balloon:nth-child(3) {
+            left: 28%;
+            animation-delay: 1.3s;
+            animation-duration: 4.5s;
+            color: #45b7d1;
+        }
+        
+        .balloon:nth-child(4) {
+            left: 38%;
+            animation-delay: 1.8s;
+            animation-duration: 3.9s;
+            color: #f9ca24;
+        }
+        
+        .balloon:nth-child(5) {
+            left: 48%;
+            animation-delay: 2.3s;
+            animation-duration: 4.1s;
+            color: #f0932b;
+        }
+        
+        .balloon:nth-child(6) {
+            left: 58%;
+            animation-delay: 2.8s;
+            animation-duration: 4.3s;
+            color: #eb4d4b;
+        }
+        
+        /* Cvetovi */
+        .balloon:nth-child(7) {
+            left: 15%;
+            animation-delay: 1s;
+            animation-duration: 3.5s;
+            color: #ff69b4;
+            font-size: 30px;
+        }
+        
+        .balloon:nth-child(8) {
+            left: 35%;
+            animation-delay: 1.5s;
+            animation-duration: 4s;
+            color: #ff1493;
+            font-size: 32px;
+        }
+        
+        .balloon:nth-child(9) {
+            left: 55%;
+            animation-delay: 2s;
+            animation-duration: 3.7s;
+            color: #ffd700;
+            font-size: 34px;
+        }
+        
+        .balloon:nth-child(10) {
+            left: 75%;
+            animation-delay: 2.5s;
+            animation-duration: 4.2s;
+            color: #ff69b4;
+            font-size: 28px;
+        }
+        
+        .balloon:nth-child(11) {
+            left: 85%;
+            animation-delay: 3s;
+            animation-duration: 3.8s;
+            color: #dc143c;
+            font-size: 31px;
+        }
+        
+        /* Zvezde i konfeti */
+        .balloon:nth-child(12) {
+            left: 12%;
+            animation-delay: 0.6s;
+            animation-duration: 3.3s;
+            color: #ffd700;
+            font-size: 25px;
+        }
+        
+        .balloon:nth-child(13) {
+            left: 42%;
+            animation-delay: 1.1s;
+            animation-duration: 3.6s;
+            color: #ff69b4;
+            font-size: 20px;
+        }
+        
+        .balloon:nth-child(14) {
+            left: 72%;
+            animation-delay: 1.6s;
+            animation-duration: 4s;
+            color: #00ced1;
+            font-size: 22px;
+        }
+        
+        .balloon:nth-child(15) {
+            left: 92%;
+            animation-delay: 2.1s;
+            animation-duration: 3.4s;
+            color: #ffd700;
+            font-size: 24px;
+        }
+        
+        @keyframes floatUp {
+            0% {
+                bottom: -60px;
+                opacity: 0;
+                transform: translateX(0) rotate(0deg) scale(0.8);
+            }
+            5% {
+                opacity: 0.7;
+                transform: translateX(0) rotate(2deg) scale(0.9);
+            }
+            15% {
+                opacity: 1;
+                transform: translateX(10px) rotate(-3deg) scale(1);
+            }
+            50% {
+                transform: translateX(25px) rotate(5deg) scale(1.1);
+            }
+            85% {
+                opacity: 0.8;
+                transform: translateX(40px) rotate(-2deg) scale(0.9);
+            }
+            100% {
+                bottom: 100vh;
+                opacity: 0;
+                transform: translateX(60px) rotate(8deg) scale(0.7);
+            }
+        }
+        
+        /* Hide balloons after animation */
+        .balloon-container.hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Balloon Animation -->
+    <div class="balloon-container" id="balloonContainer">
+        <div class="balloon">🎈</div>
+        <div class="balloon">🎈</div>
+        <div class="balloon">🎈</div>
+        <div class="balloon">🎈</div>
+        <div class="balloon">🎈</div>
+        <div class="balloon">🎈</div>
+        <div class="balloon">🌸</div>
+        <div class="balloon">🌺</div>
+        <div class="balloon">🌻</div>
+        <div class="balloon">🌷</div>
+        <div class="balloon">🌹</div>
+        <div class="balloon">⭐</div>
+        <div class="balloon">🎊</div>
+        <div class="balloon">💫</div>
+        <div class="balloon">✨</div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Dekoracije Đorđević</h2>
+                <p>Dekoracije & Cvećara</p>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="#pocetna" class="nav-link">Početna</a>
+                <a href="#o-nama" class="nav-link">O nama</a>
+                <a href="#usluge" class="nav-link">Usluge</a>
+                <a href="#galerija" class="nav-link">Galerija</a>
+                <a href="#cvetara" class="nav-link">Cvećara</a>
+                <a href="#kontakt" class="nav-link">Kontakt</a>
+            </div>
+            
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="pocetna" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Dekoracije Đorđević</h1>
+            <p class="hero-subtitle">Dekoracije & Cvećara</p>
+            <p class="hero-description">Kreativne dekoracije sa balonima za rođendane, svadbe i punoletstva. Jedinstveni cvetni aranžmani za sve prilike.</p>
+            <div class="hero-buttons">
+                <a href="#kontakt" class="btn btn-primary">Kontaktiraj nas</a>
+                <a href="#galerija" class="btn btn-secondary">Naši radovi</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- O nama Section -->
+    <section id="o-nama" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>O nama</h2>
+                <p>Vaša kreativnost je naša inspiracija</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Dekoracije Đorđević - Vaš partner za nezaboravne trenutke</h3>
+                    <p>Sa godinama iskustva u kreiranju čarobnih trenutaka, specijalizovani smo za dekoracije sa balonima koje će učiniti vašu proslavu jedinstvenom. Od intimnih rođendanskih zabava do raskošnih svadbi i važnih punoletstva - svaki detalj osmišljavamo sa pažnjom i ljubavlju.</p>
+                    <p>Naša cvećara nudi širok asortiman svežeg cveća i kreativnih aranžmana koji će upotpuniti atmosferu vaše proslave. Kombinujemo tradiciju sa modernim pristupom da stvorimo nezaboravne vizuelne doživljaje.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-heart"></i>
+                            <h4>Kvalitetno</h4>
+                            <p>Svaki projekat radimo sa pažnjom</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-palette"></i>
+                            <h4>Kreativno</h4>
+                            <p>Jedinstveni dizajni prilagođeni vašim željama</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-clock"></i>
+                            <h4>Pouzdano</h4>
+                            <p>Uvek na vreme, uvek profesionalno</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="img/glavne-slike/o-nama-glavna.webp" alt="Baloni Đorđević profesionalne dekoracije">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Usluge Section -->
+    <section id="usluge" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Naše usluge</h2>
+                <p>Sve što vam je potrebno za savršenu proslavu</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-birthday-cake"></i>
+                    </div>
+                    <h3>Rođendani</h3>
+                    <p>Čarobne dekoracije sa balonima za rođendanske proslave svih uzrasta. Tema po vašoj želji.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Svadbe</h3>
+                    <p>Romantične i elegantne dekoracije koje će učiniti vaš najveći dan još posebnijim.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Punoletstva</h3>
+                    <p>Stiltske dekoracije za proslavu punoletstva. Moderna i trendi rešenja.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Cvetni aranžmani</h3>
+                    <p>Prekrasni cvetni aranžmani za sve prilike. Sveže cveće, kreativni dizajn.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Specijalni eventi</h3>
+                    <p>Korporativni eventi, godišnjice, promocije i sve druge posebne prilike.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Dekoracija prostora</h3>
+                    <p>Kompletna transformacija prostora sa balonima i cvetnim aranžmanima.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galerija Section -->
+    <section id="galerija" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Naši radovi</h2>
+                <p>Pogledajte neke od naših najlepših kreacija</p>
+            </div>
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">Sve</button>
+                <button class="filter-btn" data-filter="rodjendani">Rođendani</button>
+                <button class="filter-btn" data-filter="svadbe">Svadbe</button>
+                <button class="filter-btn" data-filter="punoletstva">Punoletstva</button>
+                <button class="filter-btn" data-filter="pinjate">Pinjate</button>
+                <button class="filter-btn" data-filter="cvetni">Cvetni aranžmani</button>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="rodjendani">
+                    <img src="img/rodjendanske-dekoracije/decji-sarena-tema.jpeg" alt="Dečji rođendan sa balonima">
+                    <div class="gallery-overlay">
+                        <h4>Rođendanska dekoracija</h4>
+                        <p>Šarena tema sa balonima</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="svadbe">
+                    <img src="img/svadbe-dekoracije/elegantna-bela-tema.jpeg" alt="Elegantna svadba dekoracija">
+                    <div class="gallery-overlay">
+                        <h4>Svadba dekoracija</h4>
+                        <p>Elegantna bela tema</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="punoletstva">
+                    <img src="img/punoletstva/18.webp" alt="Elegantan punoletstvo">
+                    <div class="gallery-overlay">
+                        <h4>Punoletstvo</h4>
+                        <p>Moderna zlatna tema</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="punoletstva">
+                    <img src="img/punoletstva/WhatsApp Image 2026-02-05 at 18.22.41 (4).jpeg" alt="Luksuzno punoletstvo">
+                    <div class="gallery-overlay">
+                        <h4>Luksuzno punoletstvo</h4>
+                        <p>Sofisticirani dizajn</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="punoletstva">
+                    <img src="img/punoletstva/piratska-avantura.jpeg" alt="Tematsko punoletstvo">
+                    <div class="gallery-overlay">
+                        <h4>Tematsko punoletstvo</h4>
+                        <p>Kreativna tema po želji</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="cvetni">
+                    <img src="img/cvetni-aranzmani/elegantni-buket-ruze.webp" alt="Elegantan cvetni aranžman sa ružama">
+                    <div class="gallery-overlay">
+                        <h4>Cvetni aranžman</h4>
+                        <p>Buket ruža i liluma</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="cvetni">
+                    <img src="img/cvetni-aranzmani/prolecni-tulipani.webp" alt="Cvetni aranžman sa tulipanima">
+                    <div class="gallery-overlay">
+                        <h4>Prolećni buket</h4>
+                        <p>Šareni tulipani i narcisi</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="cvetni">
+                    <img src="img/cvetni-aranzmani/vencani-buket-beli.webp" alt="Venčani buket">
+                    <div class="gallery-overlay">
+                        <h4>Venčani buket</h4>
+                        <p>Elegantan beli aranžman</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="cvetni">
+                    <img src="img/cvetni-aranzmani/rodjendan-veseli-mix.webp" alt="Rođendanski cvetni aranžman">
+                    <div class="gallery-overlay">
+                        <h4>Rođendanski buket</h4>
+                        <p>Veseli mix cveća</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="cvetni">
+                    <img src="img/cvetni-aranzmani/romanticni-crvene-ruze.webp" alt="Romantičan cvetni aranžman">
+                    <div class="gallery-overlay">
+                        <h4>Romantični buket</h4>
+                        <p>Crvene ruže za posebne trenutke</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="cvetni">
+                    <img src="img/cvetni-aranzmani/zimski-evergreen.webp" alt="Zimski cvetni aranžman">
+                    <div class="gallery-overlay">
+                        <h4>Zimski aranžman</h4>
+                        <p>Evergreen sa crvenim akcentima</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="cvetni">
+                    <img src="img/cvetni-aranzmani/luksuzni-egzotik.webp" alt="Luksuzni cvetni aranžman">
+                    <div class="gallery-overlay">
+                        <h4>Luksuzni buket</h4>
+                        <p>Egzotično cveće i zelenilo</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="rodjendani">
+                    <img src="img/rodjendanske-dekoracije/superhero-tema.jpeg" alt="Dečji rođendan superhero tema">
+                    <div class="gallery-overlay">
+                        <h4>Dečji rođendan</h4>
+                        <p>Tema superheroja</p>
+                    </div>
+                </div>  
+                <div class="gallery-item" data-category="rodjendani">
+                    <img src="img/rodjendanske-dekoracije/markov-rodjendan.jpeg" alt="Markov rođendan dekoracija">
+                    <div class="gallery-overlay">
+                        <h4>Markov rođendan</h4>
+                        <p>Tema superheroja</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="rodjendani">
+                    <img src="img/rodjendanske-dekoracije/princeza-roze-tema.jpeg" alt="Rođendan sa princeza temom">
+                    <div class="gallery-overlay">
+                        <h4>Princeza rođendan</h4>
+                        <p>Roze tema za male princeze</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="rodjendani">
+                    <img src="img/rodjendanske-dekoracije/sportski-fudbal.jpeg" alt="Sportski rođendan">
+                    <div class="gallery-overlay">
+                        <h4>Sportski rođendan</h4>
+                        <p>Fudbalska tema</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="rodjendani">
+                    <img src="img/rodjendanske-dekoracije/safari-zivotinje.jpeg" alt="Rođendan sa životinjama">
+                    <div class="gallery-overlay">
+                        <h4>Safari rođendan</h4>
+                        <p>Tema sa divljim životinjama</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="rodjendani">
+                    <img src="img/rodjendanske-dekoracije/unicorn-magija.jpeg" alt="Unicorn rođendan">
+                    <div class="gallery-overlay">
+                        <h4>Unicorn tema</h4>
+                        <p>Magična duginih boja</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="rodjendani">
+                    <img src="img/rodjendanske-dekoracije/piratska-avantura.jpeg" alt="Rođendan piratska tema">
+                    <div class="gallery-overlay">
+                        <h4>Piratski rođendan</h4>
+                        <p>Avantura na visokim morima</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="rodjendani">
+                    <img src="img/rodjendanske-dekoracije/elegantni-odrasli.jpeg" alt="Elegantni odrasli rođendan">
+                    <div class="gallery-overlay">
+                        <h4>Elegantni rođendan</h4>
+                        <p>Sofisticirana tema za odrasle</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="svadbe">
+                    <img src="img/svadbe-dekoracije/rusticna-prirodna.jpeg" alt="Rustična svadba dekoracija">
+                    <div class="gallery-overlay">
+                        <h4>Rustična svadba</h4>
+                        <p>Prirodni aranžman</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="svadbe">
+                    <img src="img/svadbe-dekoracije/moderna-minimalistick.jpeg" alt="Moderna svadba dekoracija">
+                    <div class="gallery-overlay">
+                        <h4>Moderna svadba</h4>
+                        <p>Minimalistički stil</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="svadbe">
+                    <img src="img/svadbe-dekoracije/romanticna-cvetna.jpeg" alt="Romantična svadba">
+                    <div class="gallery-overlay">
+                        <h4>Romantična svadba</h4>
+                        <p>Cvetna dekoracija sa ružama</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="svadbe">
+                    <img src="img/svadbe-dekoracije/luksuzna-zlatna.jpeg" alt="Luksuzna svadba">
+                    <div class="gallery-overlay">
+                        <h4>Luksuzna svadba</h4>
+                        <p>Zlatni akenti i kristali</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="svadbe">
+                    <img src="img/svadbe-dekoracije/letnja-na-otvorenom.jpeg" alt="Letnj svadba na otvorenom">
+                    <div class="gallery-overlay">
+                        <h4>Letnja svadba</h4>
+                        <p>Dekoracija na otvorenom</p>
+                    </div>
+                </div>
+                
+                <!-- PINJATE - Grupa 5 -->
+                <div class="gallery-item" data-category="pinjate">
+                    <img src="img/pinjate/pinjata-bob.jpeg" alt="Bob pinjata">
+                    <div class="gallery-overlay">
+                        <h4>Bob pinjata</h4>
+                        <p>Popularna animirana pinjata</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="pinjate">
+                    <img src="img/pinjate/pinjata-pinokio.jpeg" alt="Pinokio pinjata">
+                    <div class="gallery-overlay">
+                        <h4>Pinokio pinjata</h4>
+                        <p>Klasična bajka tema</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="pinjate">
+                    <img src="img/pinjate/pinjata-stich.jpeg" alt="Stitch pinjata">
+                    <div class="gallery-overlay">
+                        <h4>Stitch pinjata</h4>
+                        <p>Disney karakter tema</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="pinjate">
+                    <img src="img/pinjate/pinjata2.jpeg" alt="Kreativna pinjata">
+                    <div class="gallery-overlay">
+                        <h4>Kreativna pinjata</h4>
+                        <p>Jedinstvena personalizovana tema</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cvećara Section -->
+    <section id="cvetara" class="florist">
+        <div class="container">
+            <div class="section-header">
+                <h2>Naša cvećara</h2>
+                <p>Sveže cveće i kreativni aranžmani</p>
+            </div>
+            <div class="florist-content">
+                <div class="florist-image">
+                    <img src="img/glavne-slike/cvecara.jpeg" alt="LO Cvećara - profesionalni cvetni aranžmani" style="width: 100%; height: auto; min-height: 300px; object-fit: cover; border-radius: 10px;">
+                </div>
+                <div class="florist-text">
+                    <h3>LO Cvećara</h3>
+                    <p>Posetite našu cvećaru gde ćete pronaći najlepše sveže cveće, kreativne bukete i aranžmane za sve prilike. Naš tim florista sa strašću kreira jedinstvene kompozicije koje će oduševiti vas i vaše najmilije.</p>
+                    
+                    <div class="florist-services">
+                        <div class="florist-service">
+                            <i class="fas fa-seedling"></i>
+                            <div>
+                                <h4>Sveže cveće</h4>
+                                <p>Dnevno sveže dostave direktno od proizvođača</p>
+                            </div>
+                        </div>
+                        <div class="florist-service">
+                            <i class="fas fa-heart"></i>
+                            <div>
+                                <h4>Personalizovani buketi</h4>
+                                <p>Buketi prilagođeni vašim željama i ukusu</p>
+                            </div>
+                        </div>
+                        <div class="florist-service">
+                            <i class="fas fa-truck"></i>
+                            <div>
+                                <h4>Dostava</h4>
+                                <p>Brza i pažljiva dostava širom grada</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="location-info">
+                        <h4><i class="fas fa-map-marker-alt"></i> Lokacija</h4>
+                        <p>
+                            <a href="https://maps.apple.com/place?q=Maršala%20Tita%2060%2C%20Leštane&ll=44.7866,20.4489" target="_blank" style="color: #4CAF50; text-decoration: none; font-weight: bold;">
+                                <i class="fas fa-map-marker-alt" style="margin-right: 5px;"></i>
+                                Maršala Tita 60, Leštane
+                            </a>
+                        </p>
+                        <p>LO Cvećara</p>
+                        <p><strong>Radno vreme:</strong></p>
+                        <p>Ponedeljak - Petak: 08:00 - 20:00</p>
+                        <p>Subota: 08:00 - 18:00</p>
+                        <p>Nedelja: 09:00 - 16:00</p>
+                        <div class="map-container" style="margin-top: 15px;">
+                            <a href="https://maps.apple.com/place?q=Maršala%20Tita%2060%2C%20Leštane&ll=44.7866,20.4489" target="_blank" class="map-link" style="display: inline-block; padding: 10px 15px; background: #4CAF50; color: white; text-decoration: none; border-radius: 5px;">
+                                <i class="fas fa-map-marker-alt"></i> Otvori u mapi
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontakt Section -->
+    <section id="kontakt" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Kontaktirajte nas</h2>
+                <p>Spremni smo da realizujemo vaše ideje</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Povežite se sa nama</h3>
+                    <p>Imate pitanje ili želite da zakažete konsultaciju? Kontaktirajte nas preko bilo kog od naših kanala komunikacije.</p>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Telefon</h4>
+                            <p>+381 11 123 4567</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@baloni-dekoracije.rs</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Adresa</h4>
+                            <p>Maršala Tita 60<br>Leštane, LO Cvećara</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <h4>Pratite nas</h4>
+                        <div class="social-icons">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#" aria-label="Viber"><i class="fab fa-viber"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form">
+                    <h3>Pošaljite nam poruku</h3>
+                    <div class="form-group">
+                        <label for="name">Ime i prezime</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefon</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Tip usluge</label>
+                        <select id="service" name="service">
+                            <option value="">Izaberite uslugu</option>
+                            <option value="rodjendani">Rođendani</option>
+                            <option value="svadbe">Svadbe</option>
+                            <option value="punoletstva">Punoletstva</option>
+                            <option value="pinjate">Pinjate</option>
+                            <option value="cvetni">Cvetni aranžmani</option>
+                            <option value="ostalo">Ostalo</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Poruka</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Opišite vašu viziju ili postavite pitanje..." required></textarea>
+                    </div>
+                    <div style="display: flex; gap: 15px; align-items: center;">
+                        <button type="submit" class="btn btn-primary">Pošalji poruku</button>
+                        <a href="tel:+381111234567" class="btn btn-call" style="display: inline-flex; align-items: center; padding: 12px 20px; background: #4CAF50; color: white; text-decoration: none; border-radius: 5px; font-weight: 600;">
+                            <i class="fas fa-phone-alt" style="margin-right: 8px;"></i>
+                            Pozovi odmah
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Dekoracije Đorđević</h3>
+                    <p>Kreativne dekoracije sa balonima i prekrasni cvetni aranžmani za sve vaše posebne trenutke.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Usluge</h4>
+                    <ul>
+                        <li><a href="#usluge">Rođendani</a></li>
+                        <li><a href="#usluge">Svadbe</a></li>
+                        <li><a href="#usluge">Punoletstva</a></li>
+                        <li><a href="#cvetara">Cvetni aranžmani</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Kontakt</h4>
+                    <p><i class="fas fa-phone"></i> +381 11 123 4567</p>
+                    <p><i class="fas fa-envelope"></i> info@baloni-dekoracije.rs</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Maršala Tita 60, Leštane</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Radno vreme</h4>
+                    <p>Pon - Pet: 08:00 - 20:00</p>
+                    <p>Subota: 08:00 - 18:00</p>
+                    <p>Nedelja: 09:00 - 16:00</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Baloni Đorđević. Sva prava zadržana.</p>
+                <p>Dizajn sajta sa ljubavlju ❤️</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="backToTop" class="back-to-top" aria-label="Nazad na vrh">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    
+    <script>
+        // Hide balloon animation after it completes
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                const balloonContainer = document.getElementById('balloonContainer');
+                balloonContainer.classList.add('hide');
+            }, 7500); // Hide after animation completes (longer for more elements)
+        });
+    </script>
+</body>
+</html>
