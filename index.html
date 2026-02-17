@@ -456,36 +456,134 @@
                 <h2>Kontaktirajte nas</h2>
                 <p>Brz i jednostavan kontakt preko WhatsApp-a</p>
             </div>
-            <div class="contact-content" style="text-align: center;">
-                <div class="whatsapp-contact" style="max-width: 600px; margin: 0 auto; padding: 50px 30px; background: linear-gradient(135deg, #25D366, #128C7E); border-radius: 20px; color: white; box-shadow: 0 15px 40px rgba(37, 211, 102, 0.3);">
-                    <div style="margin-bottom: 30px;">
-                        <i class="fab fa-whatsapp" style="font-size: 80px; margin-bottom: 20px; display: block;"></i>
-                        <h3 style="font-size: 2rem; margin-bottom: 15px; color: white;">Pošaljite nam poruku</h3>
-                        <p style="font-size: 1.2rem; opacity: 0.9; margin-bottom: 30px;">Brzo i jednostavno - opišite šta vam je potrebno</p>
+            <div class="contact-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start;">
+                
+                <!-- Leva strana - WhatsApp kontakt i mapa -->
+                <div class="contact-left">
+                    <div class="whatsapp-contact" style="margin-bottom: 40px; padding: 40px 30px; background: linear-gradient(135deg, #25D366, #128C7E); border-radius: 20px; color: white; box-shadow: 0 15px 40px rgba(37, 211, 102, 0.3); text-align: center;">
+                        <div style="margin-bottom: 25px;">
+                            <i class="fab fa-whatsapp" style="font-size: 60px; margin-bottom: 15px; display: block;"></i>
+                            <h3 style="font-size: 1.8rem; margin-bottom: 10px; color: white;">Pošaljite nam poruku</h3>
+                            <p style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 20px;">Brzo i jednostavno - opišite šta vam je potrebno</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 25px;">
+                            <p style="font-size: 1.2rem; font-weight: 600; margin-bottom: 8px;">📱 064 969 0804</p>
+                            <p style="opacity: 0.9;">Maršala Tita 60, Beograd • LO Cvećara</p>
+                        </div>
+                        
+                        <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                            <a href="https://wa.me/381649690804?text=Pozdrav!%20Interesuje%20me%20vaša%20ponuda%20za%20dekoracije." 
+                               class="btn" 
+                               style="display: inline-flex; align-items: center; padding: 12px 20px; background: white; color: #25D366; text-decoration: none; border-radius: 25px; font-weight: 600; font-size: 1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.15); transition: all 0.3s ease;" 
+                               onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)';" 
+                               onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.15)';">
+                                <i class="fab fa-whatsapp" style="margin-right: 8px; font-size: 1.1rem;"></i>
+                                WhatsApp
+                            </a>
+                            
+                            <a href="tel:+381649690804" 
+                               class="btn" 
+                               style="display: inline-flex; align-items: center; padding: 12px 20px; background: rgba(255,255,255,0.2); color: white; text-decoration: none; border-radius: 25px; font-weight: 600; font-size: 1rem; border: 2px solid white; transition: all 0.3s ease;" 
+                               onmouseover="this.style.background='white'; this.style.color='#25D366';" 
+                               onmouseout="this.style.background='rgba(255,255,255,0.2)'; this.style.color='white';">
+                                <i class="fas fa-phone-alt" style="margin-right: 8px;"></i>
+                                Pozovi
+                            </a>
+                        </div>
                     </div>
                     
-                    <div style="margin-bottom: 30px;">
-                        <p style="font-size: 1.3rem; font-weight: 600; margin-bottom: 10px;">📱 064 969 0804</p>
-                        <p style="opacity: 0.9;">Maršala Tita 60, Leštane • LO Cvećara</p>
+                    <!-- Lokacija na mapi -->
+                    <div class="location-section">
+                        <h3 style="margin-bottom: 20px; color: #2c3e50; font-size: 1.5rem; text-align: center;">📍 Naša lokacija</h3>
+                        <div style="border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15); margin-bottom: 20px;">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.1234567890!2d20.5813912!3d44.7345583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a764f9b97e0b7%3A0xe1e9012b82965e36!2sMar%C5%A1ala%20Tita%2060%2C%20Beograd%2C%20Srbija!5e0!3m2!1ssr!2srs!4v1644444444444!5m2!1ssr!2srs" 
+                                width="100%" 
+                                height="250" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Lokacija LO Cvećara - Maršala Tita 60, Beograd">
+                            </iframe>
+                        </div>
+                        
+                        <div style="text-align: center;">
+                            <a href="https://www.google.com/maps/place/Maršala+Tita+60,+Beograd,+Srbija/@44.7345583,20.5813912,18.86z/data=!4m6!3m5!1s0x475a764f9b97e0b7:0xe1e9012b82965e36!8m2!3d44.7344247!4d20.5817008!16s/g/11k19l6gjc?entry=ttu&g_ep=EgoyMDI2MDIxMS4wIKXMDSoASAFQAw%3D%3D" 
+                               target="_blank"
+                               class="btn" 
+                               style="display: inline-flex; align-items: center; padding: 12px 20px; background: #4285F4; color: white; text-decoration: none; border-radius: 8px; font-weight: 600; transition: all 0.3s ease;"
+                               onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 15px rgba(66, 133, 244, 0.3)';"
+                               onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                                <i class="fas fa-external-link-alt" style="margin-right: 8px;"></i>
+                                Otvori u Google Maps
+                            </a>
+                        </div>
                     </div>
-                    
-                    <a href="https://wa.me/381649690804?text=Pozdrav!%20Interesuje%20me%20vaša%20ponuda%20za%20dekoracije." 
-                       class="btn" 
-                       style="display: inline-flex; align-items: center; padding: 18px 40px; background: white; color: #25D366; text-decoration: none; border-radius: 50px; font-weight: 700; font-size: 1.2rem; box-shadow: 0 8px 25px rgba(0,0,0,0.15); transition: all 0.3s ease; margin: 10px;" 
-                       onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 35px rgba(0,0,0,0.2)';" 
-                       onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)';">
-                        <i class="fab fa-whatsapp" style="margin-right: 12px; font-size: 1.3rem;"></i>
-                        Pošaljite WhatsApp poruku
-                    </a>
-                    
-                    <a href="tel:+381649690804" 
-                       class="btn" 
-                       style="display: inline-flex; align-items: center; padding: 18px 40px; background: rgba(255,255,255,0.2); color: white; text-decoration: none; border-radius: 50px; font-weight: 700; font-size: 1.2rem; border: 2px solid white; transition: all 0.3s ease; margin: 10px;" 
-                       onmouseover="this.style.background='white'; this.style.color='#25D366';" 
-                       onmouseout="this.style.background='rgba(255,255,255,0.2)'; this.style.color='white';">
-                        <i class="fas fa-phone-alt" style="margin-right: 12px;"></i>
-                        Pozovite odmah
-                    </a>
+                </div>
+                
+                <!-- Desna strana - FAQ -->
+                <div class="contact-right">
+                    <div class="faq-section" style="background: #f8f9fa; border-radius: 20px; padding: 40px 30px; height: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
+                        <h3 style="text-align: center; margin-bottom: 30px; color: #2c3e50; font-size: 1.8rem;">❓ Često postavljena pitanja</h3>
+                        
+                        <div class="faq-item" style="margin-bottom: 25px; border-bottom: 1px solid #e9ecef; padding-bottom: 20px;">
+                            <h4 style="color: #25D366; margin-bottom: 10px; font-size: 1.1rem;">🎈 Koliko unapred treba da naručim dekoracije?</h4>
+                            <p style="color: #555; line-height: 1.6;">Za rođendane i manje proslave preporučujemo 3-5 dana unapred. Za svadbe i veće eventi najmanje 2-3 nedelje ranije.</p>
+                        </div>
+                        
+                        <div class="faq-item" style="margin-bottom: 25px; border-bottom: 1px solid #e9ecef; padding-bottom: 20px;">
+                            <h4 style="color: #25D366; margin-bottom: 10px; font-size: 1.1rem;">💰 Da li imate paket ponude?</h4>
+                            <p style="color: #555; line-height: 1.6;">Da! Imamo različite pakete za svaki budžet. Kontaktirajte nas preko WhatsApp-a da vam pošaljemo cenovnik.</p>
+                        </div>
+                        
+                        <div class="faq-item" style="margin-bottom: 25px; border-bottom: 1px solid #e9ecef; padding-bottom: 20px;">
+                            <h4 style="color: #25D366; margin-bottom: 10px; font-size: 1.1rem;">🚚 Da li dostavljate dekoracije?</h4>
+                            <p style="color: #555; line-height: 1.6;">Da, dostavljamo i postavljamo dekoracije u Beogradu i okolini. Dostava je uključena u cenu za veće pakete.</p>
+                        </div>
+                        
+                        <div class="faq-item" style="margin-bottom: 25px; border-bottom: 1px solid #e9ecef; padding-bottom: 20px;">
+                            <h4 style="color: #25D366; margin-bottom: 10px; font-size: 1.1rem;">🌸 Mogu li da kombinujem baloni i cveće?</h4>
+                            <p style="color: #555; line-height: 1.6;">Apsolutno! Specijalizovani smo za kombinacije balona i cvetnih aranžmana koji stvaraju jedinstvenu atmosferu.</p>
+                        </div>
+                        
+                        <div class="faq-item" style="margin-bottom: 25px; border-bottom: 1px solid #e9ecef; padding-bottom: 20px;">
+                            <h4 style="color: #25D366; margin-bottom: 10px; font-size: 1.1rem;">⏰ Kakvo je vaše radno vreme?</h4>
+                            <p style="color: #555; line-height: 1.6;">Pon-Pet: 08:00-20:00<br>Subota: 08:00-18:00<br>Nedelja: 09:00-16:00</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h4 style="color: #25D366; margin-bottom: 10px; font-size: 1.1rem;">🎯 Da li radite po specifičnim temama?</h4>
+                            <p style="color: #555; line-height: 1.6;">Da! Prilagođavamo dekoracije bilo kojoj temi - od Disney karaktera do elegantan minimalistički stil.</p>
+                        </div>
+                        
+                        <div class="faq-item" style="margin-bottom: 25px; border-bottom: 1px solid #e9ecef; padding-bottom: 20px;">
+                            <h4 style="color: #25D366; margin-bottom: 10px; font-size: 1.1rem;">📸 Gde mogu da vidim vaše radove?</h4>
+                            <p style="color: #555; line-height: 1.6; margin-bottom: 15px;">Pratite nas na Instagram-u za najnovije radove:</p>
+                            <div style="display: flex; gap: 15px; flex-wrap: wrap; align-items: center;">
+                                <a href="https://www.instagram.com/___balon___djordjevic/" target="_blank" style="display: inline-flex; align-items: center; padding: 8px 15px; background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D); color: white; text-decoration: none; border-radius: 20px; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 15px rgba(225, 48, 108, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                                    <i class="fab fa-instagram" style="margin-right: 8px;"></i>
+                                    Baloni Đorđević
+                                </a>
+                                <a href="https://www.instagram.com/lo_flowers_/" target="_blank" style="display: inline-flex; align-items: center; padding: 8px 15px; background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D); color: white; text-decoration: none; border-radius: 20px; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 15px rgba(225, 48, 108, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                                    <i class="fab fa-instagram" style="margin-right: 8px;"></i>
+                                    LO Flowers
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #e9ecef;">
+                            <p style="color: #666; margin-bottom: 15px; font-weight: 500;">Imate još pitanja?</p>
+                            <a href="https://wa.me/381649690804?text=Pozdrav!%20Imam%20pitanje%20o%20vašim%20uslugama." 
+                               style="display: inline-flex; align-items: center; padding: 12px 25px; background: #25D366; color: white; text-decoration: none; border-radius: 25px; font-weight: 600; transition: all 0.3s ease;"
+                               onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 15px rgba(37, 211, 102, 0.3)';"
+                               onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                                <i class="fab fa-whatsapp" style="margin-right: 8px;"></i>
+                                Pitajte nas!
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -499,9 +597,9 @@
                     <h3>Dekoracije Đorđević</h3>
                     <p>Kreativne dekoracije sa balonima i prekrasni cvetni aranžmani za sve vaše posebne trenutke.</p>
                     <div class="footer-social">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/___balon___djordjevic/" target="_blank" aria-label="Instagram - Baloni"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/lo_flowers_/" target="_blank" aria-label="Instagram - Cvećara"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/381649690804" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
                 
@@ -518,7 +616,17 @@
                 <div class="footer-section">
                     <h4>Kontakt</h4>
                     <p><i class="fab fa-whatsapp"></i> 064 969 0804</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Maršala Tita 60, Leštane</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Maršala Tita 60, Beograd</p>
+                    <div style="margin-top: 15px;">
+                        <p style="margin-bottom: 8px; font-weight: 600; color: #2c3e50;">Pratite nas:</p>
+                        <a href="https://www.instagram.com/___balon___djordjevic/" target="_blank" style="color: #E1306C; text-decoration: none; margin-right: 15px; font-size: 0.9rem;" onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">
+                            <i class="fab fa-instagram"></i> @___balon___djordjevic
+                        </a>
+                        <br>
+                        <a href="https://www.instagram.com/lo_flowers_/" target="_blank" style="color: #E1306C; text-decoration: none; font-size: 0.9rem; margin-top: 5px; display: inline-block;" onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">
+                            <i class="fab fa-instagram"></i> @lo_flowers_
+                        </a>
+                    </div>
                 </div>
                 
                 <div class="footer-section">
