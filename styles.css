@@ -5,6 +5,49 @@
     box-sizing: border-box;
 }
 
+/* Sticky WhatsApp Button */
+.sticky-whatsapp:hover {
+    transform: scale(1.1) !important;
+    box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6) !important;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.7);
+    }
+    100% {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    }
+}
+
+/* Mobile responsiveness for sticky button */
+@media (max-width: 768px) {
+    .sticky-whatsapp {
+        bottom: 20px !important;
+        right: 20px !important;
+        width: 55px !important;
+        height: 55px !important;
+    }
+    .sticky-whatsapp i {
+        font-size: 24px !important;
+    }
+}
+
 html {
     scroll-behavior: smooth;
 }
